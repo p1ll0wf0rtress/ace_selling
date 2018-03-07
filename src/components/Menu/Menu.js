@@ -11,12 +11,12 @@ export default class Menu  extends Component {
         return(
             <div className="container">
                 <div className="row">
-                    <Link to="/"><button>Home</button></Link>
-                    <button>Book</button>
-                    <button>Final Table</button>
-                    <button>Workshops</button>
-                    <button>About</button>
-                    <Link to="/contact"><button >Contact</button></Link>
+                    <Link to="/"><div className="offset-by-one two columns">Home</div></Link>
+                    <Link to="/"><div className="two columns">Book</div></Link>
+                    <Link to="/"><div className="two columns">Final Table</div></Link>
+                    <Link to="/"><div className="two columns">Workshops</div></Link>
+                    <Link to="/"><div className="two columns">About</div></Link>
+                    <Link to="/contact"><div className="two columns">Contact</div></Link>
                 </div>
             </div>
         )

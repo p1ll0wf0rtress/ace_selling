@@ -1,29 +1,26 @@
 .App-header {
   background-color: #fff;
   text-align: center;
-  height: 100px;
+  /* height: 100px; */
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-bottom: 20px;
-  color: #2e3532;
+  color: #2e3532 !important;
 }
 
 .App-title {
     letter-spacing: 1px;
     text-decoration: none !important;
+    margin-top: 0px !important;
 }
 
-/* @media(min-width: 500px){
-    .App-header{
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-    }
-} */
+.chip {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    animation: App-logo-spin infinite;
+}
 
-@media(max-width: 500px){
-    .App-header{
-        height: 40px;
-    }
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }

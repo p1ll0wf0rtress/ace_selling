@@ -36,12 +36,13 @@ export default class Page extends Component{
             .then((res) => {
                 console.log(res)
                 if(res.mainImage === undefined || res.mainImage.asset === undefined){
-                    this.setState({mainImage: "", padding: 0, color: "#222"})
+                    this.setState({mainImage: "", padding: 0, color: "#222", marginTop: 30})
                 } else {
                     this.setState({
                         mainImage: urlFor(res.mainImage).width(1800).url(),
                         padding: 75,
-                        color: "#fff"
+                        color: "#fff",
+                        marginTop: '30px'
                     });
                 }
                 const el = blocksToHtml({
@@ -64,9 +65,9 @@ export default class Page extends Component{
         return(
             <div>
                 <div style={{backgroundImage: `url(${this.state.mainImage})`, color: this.state.color, height: this.state.height, backgroundPosition: 'center', backgroundSize: 'cover', padding: this.state.padding, marginBottom: 30}}>
-                    <p ref="page_title" style={{fontSize: '2.5em', fontWeight: 'bold', textAlign: 'center'}}></p>
+                    <p ref="page_title" style={{fontSize: '2.5em', fontWeight: 'bold', textAlign: 'center', paddingTop: this.state.marginTop }}></p>
                 </div>
-                <div className="container">
+                <div className="container page">
                     <div className="row">
                         <div className="eight columns offset-by-two pageContent" ref="pageContent">
                         </div>

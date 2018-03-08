@@ -10,11 +10,10 @@ export default class Menu  extends Component {
     render(){
         return(
             <div className="container menu">
-                <div className="row">
-                    {/* <Link to="/"><div className="menuItem two columns offset-by-one">Home</div></Link> */}
-                    <Link to="/book"><div className="menuItem two columns offset-by-two">Book</div></Link>
-                    <Link to="/finaltable"><div className="menuItem two columns">Final Table</div></Link>
-                    <Link to="/workshops"><div className="menuItem two columns">Workshops</div></Link>
+                <div className="row" style={{marginTop: '30px'}}>
+                    <Link to="/finaltable"><div className="menuItem two columns offset-by-two">Partner</div></Link>
+                    <Link to="/workshops"><div className="menuItem three columns">Workshops</div></Link>
+                    <Link to="/book"><div className="menuItem two columns">Book</div></Link>
                     <Link to="/about"><div className="menuItem two columns">About</div></Link>
                     <Link to="/contact"><div className="menuItem two columns">Contact</div></Link>
                 </div>

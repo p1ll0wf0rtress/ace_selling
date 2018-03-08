@@ -12,7 +12,8 @@ export default class Home extends Component {
                 <div className="full-width" style={{backgroundImage: `url(${banner})`}}>
                     <div className="container">
                         <div className="row">
-                            <h2 className="title_phrase"><span style={{fontWeight: 'tight'}}>Stack The Deck</span>&nbsp;<span style={{color: '#b9172f', fontWeight: 'bold'}}>In Your Favor</span></h2>
+                            <h2 className="title_phrase"><span style={{letterSpacing: 'tight'}}>Stack The Deck</span>&nbsp;<span style={{color: '#b9172f', fontWeight: 'bold'}}>In Your Favor</span></h2>
+                            <h4 style={{ color: 'white'}}>Get your sales team in the mindset of a master poker player</h4>
                         </div>
                     </div>
                 </div>
@@ -27,22 +28,22 @@ export default class Home extends Component {
                         <img src={deal} className="graphic" alt="handshake graphic" />
                         <h3>Pick the Right Deals and Win</h3>
                         <div className="ten columns offset-by-one">
-                            <p>As an invested professional, you can't afford to waste valuable time, money and effort chasing oportunities that will never pan out. ACE Selling is designed to improve the quality of the opportunities in your pipeline and to improve your odds of winning each deal you pursue.</p>
+                            <p>As an invested professional, your team can't afford to waste valuable time, money and effort chasing oportunities that will never pan out. ACE Selling is designed to improve the quality of the opportunities in your pipeline and to improve your odds of winning each deal you pursue.</p>
                         </div>
                     </div>
                 </div>
-                <div style={{backgroundColor: '#b3001b', color: "#fff", marginTop: 30, padding: 40}}>
+                {/* <div style={{backgroundColor: '#b3001b', color: "#fff", marginTop: 30, padding: 40}}>
                     <div className="container">
                         <div className="row">
                             <h5>
-                                <em>Most sales books that I have read focus almost exclusively on the ‘close’ at the expense of focusing on "prospecting/qualification." ACE Selling is different. A full two-thirds of the book...are spent on focusing your resources on prospecting and qualification. Only once you have put yourself in a position to win, does the end game begin.</em>
+                                <em></em>
                             </h5>
                         </div>
                         <div className="row">
                             <div className="four columns offset-by-six">- ACE Selling Customer</div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="container" style={{marginTop: 50}}>
                     <div className="row">
                             <img src={rick} className="rick" alt="Rick Chouinard" />

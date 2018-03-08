@@ -1,0 +1,22 @@
+.full-width {
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+.title_phrase {
+    padding-top: 150px !important;
+    color: white;
+}
+
+.graphic {
+    width: 100px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.rick {
+    width: 175px;
+    margin-bottom: 20px;
+}

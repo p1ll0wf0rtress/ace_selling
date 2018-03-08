@@ -3,7 +3,11 @@ import React, { Component } from 'react';
 export default class Contact extends Component {
     render(){
         return(
-            <div className="container">
+            <div className="container pageContent">
+                <div className="row pageTitle">
+                    <h4>ACE Selling is all about communication</h4>
+                    <p>Ante up and send us a message!</p>
+                </div>
                 <form>
                     <div className="row">
                         <div className="four columns offset-by-two">
@@ -28,7 +32,7 @@ export default class Contact extends Component {
                     <div className="row">
                         <div className="eight columns offset-by-two">
                         <label htmlFor="message">Message</label>
-                        <textarea className="u-full-width" placeholder="Hey Architech! …" id="message" onChange={this.handleMessage}></textarea>
+                        <textarea className="u-full-width" placeholder="Hi, Rick! …" id="message" onChange={this.handleMessage}></textarea>
                         <input className="button-primary" value="Submit" autoComplete="off" type="submit" onClick={this.sendMessage}/>
                         </div>
                     </div>

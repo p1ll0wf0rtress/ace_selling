@@ -19,6 +19,18 @@ export default class Home extends Component {
                 </div>
                 <div className="container">
                     <div className="row">
+                        <div className="six columns">
+                            <img src={require('./poker.svg')} alt="poker handle" height={75} />
+                            <h5>Invest in the right hand.</h5>
+                        </div>
+                        <div className="six columns">
+                            <img src={require('./win.svg')} alt="win crown" height={75} />
+                            <h5>Spend more time winning.</h5>
+                        </div>
+                    </div>
+                </div>
+                <div className="container">
+                    <div className="row">
                         <h5>At the poker table, and the conference table, there can only be one winner.</h5>
                         <div className="ten columns offset-by-one">
                             <p>ACE Selling shows you how to leverage the same skills master poker players use to win million-dollars hands to win in sales. The same decision making can be applied to the sales process - giving you and your team the edge to reach your goals.</p>

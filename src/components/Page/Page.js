@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import client from '../../imports/sanityclient';
-// import '../../css/skeleton.css';
 import './Page.css';
 
 const imageUrlBuilder = require('@sanity/image-url');
@@ -30,35 +29,38 @@ export default class Page extends Component{
 
     componentDidMount(){
         console.log(this.props.location.pathname);
+        this.getData();
+    }
 
+    getData = () => {
         client
-            .fetch(`*[_type == "post" && slug.current == "${this.props.location.pathname}"][0]`)
-            .then((res) => {
-                console.log(res)
-                if(res.mainImage === undefined || res.mainImage.asset === undefined){
-                    this.setState({mainImage: "", padding: 0, color: "#222", marginTop: 30})
-                } else {
-                    this.setState({
-                        mainImage: urlFor(res.mainImage).width(1800).url(),
-                        padding: 75,
-                        color: "#fff",
-                        marginTop: '30px'
-                    });
-                }
-                const el = blocksToHtml({
-                    blocks: res.body,
-                    serializers: serializers,
-                    imageOptions: { h: 250, w: 100 },
-                    projectId: 'y05gym0u',
-                    dataset: 'production',
-                })
-                this.refs.page_title.innerHTML = res.title;
-                this.refs.pageContent.innerHTML = el;
+        .fetch(`*[_type == "post" && slug.current == "${this.props.location.pathname}"][0]`)
+        .then((res) => {
+            console.log(res)
+            if(res.mainImage === undefined || res.mainImage.asset === undefined){
+                this.setState({mainImage: "", padding: 0, color: "#222", marginTop: 30})
+            } else {
+                this.setState({
+                    mainImage: urlFor(res.mainImage).width(1800).url(),
+                    padding: 75,
+                    color: "#fff",
+                    marginTop: '30px'
+                });
+            }
+            const el = blocksToHtml({
+                blocks: res.body,
+                serializers: serializers,
+                imageOptions: { h: 250, w: 100 },
+                projectId: 'y05gym0u',
+                dataset: 'production',
+            })
+            this.refs.page_title.innerHTML = res.title;
+            this.refs.pageContent.innerHTML = el;
 
-            })
-            .catch((err) => {
-                console.log(err)
-            })
+        })
+        .catch((err) => {
+            console.log(err)
+        })
     }
 
     render(){

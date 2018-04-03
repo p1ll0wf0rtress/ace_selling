@@ -4,7 +4,7 @@ import './Contact.css';
 export default class Contact extends Component {
     render(){
         return(
-            <div className="container pageContent">
+            <div className="container contactContainer">
                 <div className="row pageTitle">
                     <h4>ACE Selling is all about communication</h4>
                     <p>Ante up and send us a message!</p>
@@ -31,10 +31,14 @@ export default class Contact extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="eight columns offset-by-two">
-                        <label htmlFor="message">Message</label>
-                        <textarea className="u-full-width" placeholder="Hi, Rick! …" id="message" onChange={this.handleMessage}></textarea>
-                        <input className="button-primary" value="Submit" autoComplete="off" type="submit" onClick={this.sendMessage}/>
+                            <div className="eight columns offset-by-two">
+                            <label htmlFor="message">Message</label>
+                            <textarea className="u-full-width" placeholder="Hi, Rick! …" id="message" onChange={this.handleMessage}></textarea>
+                        </div>
+                    </div>
+                    <div className="row" style={{marginTop: 10}}>
+                        <div className="two columns offset-by-five">
+                            <input className="button-primary u-full-width" value="Submit" autoComplete="off" type="submit" onClick={this.sendMessage}/>
                         </div>
                     </div>
                 </form>

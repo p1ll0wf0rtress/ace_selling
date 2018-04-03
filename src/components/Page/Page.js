@@ -41,7 +41,7 @@ export default class Page extends Component{
                 this.setState({mainImage: "", padding: 0, color: "#222", marginTop: 30})
             } else {
                 this.setState({
-                    mainImage: urlFor(res.mainImage).width(1800).url(),
+                    mainImage: urlFor(res.mainImage).width(1900).url(),
                     padding: 75,
                     color: "#fff",
                     marginTop: '30px'
@@ -50,7 +50,7 @@ export default class Page extends Component{
             const el = blocksToHtml({
                 blocks: res.body,
                 serializers: serializers,
-                imageOptions: { h: 250, w: 100 },
+                imageOptions: { h: 100, w: 100 },
                 projectId: 'y05gym0u',
                 dataset: 'production',
             })
@@ -65,8 +65,9 @@ export default class Page extends Component{
 
     render(){
         return(
-            <div>
-                <div style={{backgroundImage: `url(${this.state.mainImage})`, color: this.state.color, height: this.state.height, backgroundPosition: 'center', backgroundSize: 'cover', padding: this.state.padding, marginBottom: 30}}>
+            <div className="genericPageContainer">
+                <div style={{backgroundImage: `url(${this.state.mainImage})`, color: this.state.color, height: this.state.height, backgroundPosition: 'center', 
+                            backgroundSize: 'cover', padding: this.state.padding, marginBottom: 30}}>
                     <p ref="page_title" style={{fontSize: '2.5em', fontWeight: 'bold', textAlign: 'center', paddingTop: this.state.marginTop }}></p>
                 </div>
                 <div className="container page">

@@ -1,13 +1,15 @@
 .full-width {
-    height: 350px;
     background-position: center;
     background-size: cover;
     margin-bottom: 30px;
+    margin-top: 120px;
+    height: 350px;
 }
 
 .title_phrase {
-    padding-top: 150px !important;
+    padding-top: 125px !important;
     color: white;
+    letter-spacing: 0.4rem !important;
 }
 
 .graphic {
@@ -16,7 +18,12 @@
     margin-bottom: 25px;
 }
 
-.rick {
-    width: 175px;
-    margin-bottom: 20px;
+.clipPolygon {
+    /* chevron */
+    -webkit-clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0, 50% 15%);
+    clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0, 50% 15%);
+    /* hexagon */
+    /* -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
+    height: 250px;
 }

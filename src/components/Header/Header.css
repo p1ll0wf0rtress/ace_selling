@@ -5,22 +5,82 @@
   padding-top: 20px;
   padding-bottom: 20px;
   color: #2e3532 !important;
+  -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
 }
 
 .App-title {
     letter-spacing: 1px;
     text-decoration: none !important;
     margin-top: 0px !important;
+    text-align: right;
+    color: #b3001b;
+    font-weight: 600;
 }
 
-.chip {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    animation: App-logo-spin infinite;
+.App-subtitle {
+  margin-left: 15px;
+  margin-bottom: 0px !important;
+  text-align: left;
+  color: #b3001b;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.menuItem {
+  display: flex;
+  text-decoration: none;
+  text-align: right;
+  margin-left: 20px;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (min-width: 600px) and (max-width: 920px){
+  .chip {
+    display: none;
+  }
+  .App-title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 960px){
+  .App-subtitle {
+    display: none;
+  }
+}
+
+@media (max-width: 600px){
+  .App-title {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menuItem {
+    display: none;
+  }
+  
+  .mobileMenu {
+    display: inherit;
+  }
+  .mobileMenuItem {
+    margin-bottom: 0px !important;
+    text-decoration: none;
+  }
 }
